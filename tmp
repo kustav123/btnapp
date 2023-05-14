@@ -1,0 +1,1322 @@
+<div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Motherboard
+                                                        </label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-make"
+                                                                name="motherboard-make" data-type="motherboard"
+                                                                placeholder="motherboard-make" input
+                                                                class="form-control">
+                                                            <label for="motherboard-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-model"
+                                                                name="motherboard-model" placeholder="motherboard-model"
+                                                                input class="form-control">
+                                                            <label for="motherboard-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-serial"
+                                                                name="motherboard-serial"
+                                                                placeholder="motherboard-serial" input
+                                                                class="form-control">
+                                                            <label for="motherboard-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-qty"
+                                                                name="motherboard-qty" placeholder="motherboard-qty"
+                                                                input class="form-control"  oninput="calculateAmount('motherboard')">
+                                                            <label for="motherboard-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-hsn"
+                                                                name="motherboard-hsn"
+                                                                placeholder="motherboard-hsn" input
+                                                                class="form-control">
+                                                            <label for="motherboard-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="motherboard-warranty-exp"
+                                                                name="motherboard-warranty-exp"
+                                                                placeholder="motherboard-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36" selected>3 Years</option>
+                                                                <option value="60">5 Years</option>
+                                                            </select>
+                                                            <label for="motherboard-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-rate"
+                                                                name="motherboard-rate" placeholder="motherboard-rate"
+                                                                input class="form-control" oninput="calculateAmount('motherboard')">
+                                                            <label for="motherboard-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="motherboard-amount"
+                                                                name="motherboard-amount" placeholder="motherboard-amount"
+                                                                input class="form-control">
+                                                            <label for="motherboard-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- motherboard end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">HardDisk
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-make" name="hard-disk-make"
+                                                                placeholder="hard-disk-make" data-type="hdd" nput
+                                                                class="form-control">
+                                                            <label for="hard-disk-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-model"
+                                                                name="hard-disk-model" placeholder="hard-disk-model"
+                                                                input class="form-control">
+                                                            <label for="hard-disk-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-serial"
+                                                                name="hard-disk-serial" placeholder="hard-disk-serial"
+                                                                input class="form-control">
+                                                            <label for="hard-disk-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-qty" name="hard-disk-qty"
+                                                                placeholder="hard-disk-qty" input class="form-control"  oninput="calculateAmount('hard-disk')">
+                                                            <label for="hard-disk-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-hsn"
+                                                                name="hard-disk-hsn"
+                                                                placeholder="hard-disk-hsn" input
+                                                                class="form-control">
+                                                            <label for="hard-disk-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="hard-disk-warranty-exp"
+                                                                name="hard-disk-warranty-exp"
+                                                                placeholder="hard-disk-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12" selected>1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option>
+                                                            </select>
+                                                            <label for="hard-disk-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-rate" name="hard-disk-rate"
+                                                                placeholder="hard-disk-rate" input class="form-control" oninput="calculateAmount('hard-disk')">
+                                                            <label for="hard-disk-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="hard-disk-amount" name="hard-disk-amount"
+                                                                placeholder="hard-disk-amount" input class="form-control">
+                                                            <label for="hard-disk-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                <!-- harddisk end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">SSD
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-make" name="ssd-make"
+                                                                placeholder="ssd-make" data-type="ssd" input
+                                                                class="form-control">
+                                                            <label for="ssd-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-model" name="ssd-model"
+                                                                placeholder="ssd-model" input class="form-control">
+                                                            <label for="ssd-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-serial" name="ssd-serial"
+                                                                placeholder="ssd-serial" input class="form-control">
+                                                            <label for="ssd-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-qty" name="ssd-qty"
+                                                                placeholder="ssd-qty" input class="form-control" oninput="calculateAmount('ssd')">
+                                                            <label for="ssd-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-hsn"
+                                                                name="ssd-hsn"
+                                                                placeholder="ssd-hsn" input
+                                                                class="form-control">
+                                                            <label for="ssd-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="ssd-warranty-exp"
+                                                                name="ssd-warranty-exp" placeholder="ssd-warranty-exp"
+                                                                input class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="ssd-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-rate" name="ssd-rate"
+                                                                placeholder="ssd-rate" input class="form-control" oninput="calculateAmount('ssd')">
+                                                            <label for="ssd-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ssd-amount" name="ssd-amount"
+                                                                placeholder="ssd-amount" input class="form-control">
+                                                            <label for="ssd-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ssd end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">RAM
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-make" name="ram-make"
+                                                                data-type="RAM" placeholder="ram-make" input
+                                                                class="form-control">
+                                                            <label for="ram-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-model" name="ram-model"
+                                                                placeholder="ram-model" input class="form-control">
+                                                            <label for="ram-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-serial" name="ram-serial"
+                                                                placeholder="ram-serial" input class="form-control">
+                                                            <label for="ram-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-qty" name="ram-qty"
+                                                                placeholder="ram-qty" input class="form-control" oninput="calculateAmount('ram')" >
+                                                            <label for="ram-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-hsn"
+                                                                name="ram-hsn"
+                                                                placeholder="ram-hsn" input
+                                                                class="form-control">
+                                                            <label for="ram-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="ram-warranty-exp"
+                                                                name="ram-warranty-exp" placeholder="ram-warranty-exp"
+                                                                input class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="ram-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-rate" name="ram-rate"
+                                                                placeholder="ram-rate" input class="form-control" oninput="calculateAmount('ram')">
+                                                            <label for="ram-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ram-amount" name="ram-amount"
+                                                                placeholder="ram-amount" input class="form-control">
+                                                            <label for="ram-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ram end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">SMPS &
+                                                        Cabinet
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-make" name="smps-make"
+                                                                placeholder="smps-make" data-type="smps" input
+                                                                class="form-control">
+                                                            <label for="smps-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-model" name="smps-model"
+                                                                placeholder="smps-model" input class="form-control">
+                                                            <label for="smps-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-serial" name="smps-serial"
+                                                                placeholder="smps-serial" input class="form-control">
+                                                            <label for="smps-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-qty" name="smps-qty"
+                                                                placeholder="smps-qty" input class="form-control" oninput="calculateAmount('smps')">
+                                                            <label for="smps-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-hsn"
+                                                                name="smps-hsn"
+                                                                placeholder="smps-hsn" input
+                                                                class="form-control">
+                                                            <label for="smps-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="smps-warranty-exp"
+                                                                name="smps-warranty-exp" placeholder="smps-warranty-exp"
+                                                                input class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="smps-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-rate" name="smps-rate"
+                                                                placeholder="smps-rate" input class="form-control" oninput="calculateAmount('smps')">
+                                                            <label for="smps-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="smps-amount" name="smps-amount"
+                                                                placeholder="smps-amount" input class="form-control">
+                                                            <label for="smps-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- smps end -->
+
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Monitor
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-make" name="monitor-make"
+                                                                data-type="monitor" placeholder="monitor-make" input
+                                                                class="form-control">
+                                                            <label for="monitor-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-model" name="monitor-model"
+                                                                placeholder="monitor-model" input class="form-control">
+                                                            <label for="monitor-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-serial" name="monitor-serial"
+                                                                placeholder="monitor-serial" input class="form-control">
+                                                            <label for="monitor-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-qty" name="monitor-qty"
+                                                                placeholder="monitor-qty" input class="form-control" oninput="calculateAmount('monitor')" >
+                                                            <label for="monitor-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-hsn"
+                                                                name="monitor-hsn"
+                                                                placeholder="monitor-hsn" input
+                                                                class="form-control">
+                                                            
+                                                            <label for="monitor-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="monitor-warranty-exp"
+                                                                name="monitor-warranty-exp"
+                                                                placeholder="monitor-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="monitor-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-rate" name="monitor-rate"
+                                                                placeholder="monitor-rate" input class="form-control" oninput="calculateAmount('monitor')" >
+                                                            <label for="monitor-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="monitor-amount" name="monitor-amount"
+                                                                placeholder="monitor-amount" input class="form-control">
+                                                            <label for="monitor-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- monitor end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Keyboard
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-make" name="keyboard-make"
+                                                                data-type="Keyboard" placeholder="keyboard-make" input
+                                                                class="form-control">
+                                                            <label for="keyboard-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-model" name="keyboard-model"
+                                                                placeholder="keyboard-model" input class="form-control">
+                                                            <label for="keyboard-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-serial" name="keyboard-serial"
+                                                                placeholder="keyboard-serial" input class="form-control">
+                                                            <label for="keyboard-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-qty" name="keyboard-qty"
+                                                                placeholder="keyboard-qty" input class="form-control" oninput="calculateAmount('keyboard')" >
+                                                            <label for="keyboard-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-hsn"
+                                                                name="keyboard-hsn"
+                                                                placeholder="keyboard-hsn" input
+                                                                class="form-control">
+                                                            <label for="keyboard-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="keyboard-warranty-exp"
+                                                                name="keyboard-warranty-exp"
+                                                                placeholder="keyboard-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="keyboard-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-rate" name="keyboard-rate"
+                                                                placeholder="keyboard-rate" input class="form-control"  oninput="calculateAmount('keyboard')">
+                                                            <label for="keyboard-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keyboard-amount" name="keyboard-amount"
+                                                                placeholder="keyboard-amount" input class="form-control">
+                                                            <label for="keyboard-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- keyboard end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Mouse
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-make" name="mouse-make"
+                                                                data-type="Mouse" placeholder="mouse-make" input
+                                                                class="form-control">
+                                                            <label for="mouse-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-model" name="mouse-model"
+                                                                placeholder="mouse-model" input class="form-control">
+                                                            <label for="mouse-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-serial" name="mouse-serial"
+                                                                placeholder="mouse-serial" input class="form-control">
+                                                            <label for="mouse-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-qty" name="mouse-qty"
+                                                                placeholder="mouse-qty" input class="form-control"  oninput="calculateAmount('mouse')">
+                                                            <label for="mouse-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-hsn"
+                                                                name="mouse-hsn"
+                                                                placeholder="mouse-hsn" input
+                                                                class="form-control">
+                                                            <label for="mouse-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="mouse-warranty-exp"
+                                                                name="mouse-warranty-exp"
+                                                                placeholder="mouse-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="mouse-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-rate" name="mouse-rate"
+                                                                placeholder="mouse-rate" input class="form-control"  oninput="calculateAmount('mouse')">
+                                                            <label for="mouse-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="mouse-amount" name="mouse-amount"
+                                                                placeholder="mouse-amount" input class="form-control">
+                                                            <label for="mouse-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- mouse end -->
+
+
+                                                <div class="row mb-1">
+                                                    <label for="keymouse" class="col-xl-1 col-form-label">Keyboard & Mouse
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-make" name="keymouse-make"
+                                                                data-type="keymouse" placeholder="keymouse-make" input
+                                                                class="form-control">
+                                                            <label for="keymouse-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-model" name="keymouse-model"
+                                                                placeholder="keymouse-model" input class="form-control">
+                                                            <label for="keymouse-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-serial" name="keymouse-serial"
+                                                                placeholder="keymouse-serial" input class="form-control">
+                                                            <label for="keymouse-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-qty" name="keymouse-qty"
+                                                                placeholder="keymouse-qty" input class="form-control"  oninput="calculateAmount('keymouse')">
+                                                            <label for="keymouse-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-hsn"
+                                                                name="keymouse-hsn"
+                                                                placeholder="keymouse-hsn" input
+                                                                class="form-control">
+                                                            <label for="keymouse-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="keymouse-warranty-exp"
+                                                                name="keymouse-warranty-exp"
+                                                                placeholder="keymouse-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="keymouse-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-rate" name="keymouse-rate"
+                                                                placeholder="keymouse-rate" input class="form-control"  oninput="calculateAmount('keymouse')">
+                                                            <label for="keymouse-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="keymouse-amount" name="keymouse-amount"
+                                                                placeholder="keymouse-amount" input class="form-control">
+                                                            <label for="keymouse-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- keyboar mouse combo -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">UPS
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-make" name="ups-make"
+                                                                data-type="UPS" placeholder="ups-make" input
+                                                                class="form-control">
+                                                            <label for="ups-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-model" name="ups-model"
+                                                                placeholder="ups-model" input class="form-control">
+                                                            <label for="ups-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-serial" name="ups-serial"
+                                                                placeholder="ups-serial" input class="form-control">
+                                                            <label for="ups-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-qty" name="ups-qty"
+                                                                placeholder="ups-qty" input class="form-control"  oninput="calculateAmount('ups')">
+                                                            <label for="ups-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-hsn"
+                                                                name="ups-hsn"
+                                                                placeholder="ups-hsn" input
+                                                                class="form-control">
+                                                            <label for="ups-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="ups-warranty-exp"
+                                                                name="ups-warranty-exp" placeholder="ups-warranty-exp"
+                                                                input class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option><select>
+                                                            <label for="ups-warranty-exp">Warranty Expiry Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-rate" name="ups-rate"
+                                                                placeholder="ups-rate" input class="form-control"   oninput="calculateAmount('ups')">
+                                                            <label for="ups-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="ups-amount" name="ups-amount"
+                                                                placeholder="ups-amount" input class="form-control">
+                                                            <label for="ups-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ups end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Printer
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-make" name="printer-make"
+                                                                data-type="Printer" placeholder="printer-make" input
+                                                                class="form-control">
+                                                            <label for="printer-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-model" name="printer-model"
+                                                                placeholder="printer-model" input class="form-control">
+                                                            <label for="printer-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-serial" name="printer-serial"
+                                                                placeholder="printer-serial" input class="form-control">
+                                                            <label for="printer-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-qty" name="printer-qty"
+                                                                placeholder="printer-qty" input class="form-control"  oninput="calculateAmount('printer')">
+                                                            <label for="printer-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-hsn"
+                                                                name="printer-hsn"
+                                                                placeholder="printer-hsn" input
+                                                                class="form-control">
+                                                            <label for="printer-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="printer-warranty-exp"
+                                                                name="printer-warranty-exp"
+                                                                placeholder="printer-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="printer-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-rate" name="printer-rate"
+                                                                placeholder="printer-rate" input class="form-control" oninput="calculateAmount('printer')">
+                                                            <label for="printer-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="printer-amount" name="printer-amount"
+                                                                placeholder="printer-amount" input class="form-control"  >
+                                                            <label for="printer-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- printer end -->
+                                                <div class="row mb-1">
+                                                    <label for="motherboard" class="col-xl-1 col-form-label">Graphics
+                                                        Card
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-make" name="gcard-make"
+                                                                data-type="gcard" placeholder="gcard-make" input
+                                                                class="form-control">
+                                                            <label for="gcard-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-model" name="gcard-model"
+                                                                placeholder="gcard-model" input class="form-control">
+                                                            <label for="gcard-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-serial" name="gcard-serial"
+                                                                placeholder="gcard-serial" input class="form-control">
+                                                            <label for="gcard-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-qty" name="gcard-qty"
+                                                                placeholder="gcard-qty" input class="form-control"  oninput="calculateAmount('gcard')">
+                                                            <label for="gcard-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-hsn"
+                                                                name="gcard-hsn"
+                                                                placeholder="gcard-hsn" input
+                                                                class="form-control">
+                                                            <label for="gcard-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="gcard-warranty-exp"
+                                                                name="gcard-warranty-exp"
+                                                                placeholder="gcard-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="gcard-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-rate" name="gcard-rate"
+                                                                placeholder="gcard-rate" input class="form-control" oninput="calculateAmount('gcard')">
+                                                            <label for="gcard-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="gcard-amount" name="gcard-amount"
+                                                                placeholder="gcard-amount" input class="form-control"  >
+                                                            <label for="gcard-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row mb-1">
+                                                    <label for="pendrive" class="col-xl-1 col-form-label">Pendrive
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-make" name="pendrive-make"
+                                                                placeholder="pendrive-make" input class="form-control">
+                                                            <label for="pendrive-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-model" name="pendrive-model"
+                                                                placeholder="pendrive-model" input class="form-control">
+                                                            <label for="pendrive-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-serial" name="pendrive-serial"
+                                                                placeholder="pendrive-serial" input class="form-control">
+                                                            <label for="pendrive-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-qty" name="pendrive-qty"
+                                                                placeholder="pendrive-qty" input class="form-control"  oninput="calculateAmount('pendrive')">
+                                                            <label for="pendrive-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-hsn"
+                                                                name="pendrive-hsn"
+                                                                placeholder="pendrive-hsn" input
+                                                                class="form-control">
+                                                            <label for="pendrive-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="pendrive-warranty-exp"
+                                                                name="pendrive-warranty-exp"
+                                                                placeholder="pendrive-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="pendrive-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-rate" name="pendrive-rate"
+                                                                placeholder="pendrive-rate" input class="form-control" oninput="calculateAmount('pendrive')">
+                                                            <label for="pendrive-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="pendrive-amount" name="pendrive-amount"
+                                                                placeholder="pendrive-amount" input class="form-control">
+                                                            <label for="pendrive-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-1">
+                                                    <label for="router" class="col-xl-1 col-form-label">Router
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-make" name="router-make"
+                                                                placeholder="router-make" input class="form-control">
+                                                            <label for="router-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-model" name="router-model"
+                                                                placeholder="router-model" input class="form-control">
+                                                            <label for="router-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-serial" name="router-serial"
+                                                                placeholder="router-serial" input class="form-control">
+                                                            <label for="router-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-qty" name="router-qty"
+                                                                placeholder="router-qty" input class="form-control" oninput="calculateAmount('router')">
+                                                            <label for="router-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-hsn"
+                                                                name="router-hsn"
+                                                                placeholder="router-hsn" input
+                                                                class="form-control">
+                                                            <label for="router-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="router-warranty-exp"
+                                                                name="router-warranty-exp"
+                                                                placeholder="router-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="router-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-rate" name="router-rate"
+                                                                placeholder="router-rate" input class="form-control" oninput="calculateAmount('router')">
+                                                            <label for="router-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="router-amount" name="router-amount"
+                                                                placeholder="router-amount" input class="form-control">
+                                                            <label for="router-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- router end -->
+
+                                                <div class="row mb-1">
+                                                    <label for="addhard1" class="col-xl-1 col-form-label">Additional Hardware 1
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-make" name="addhard1-make"
+                                                                placeholder="addhard1-make" input class="form-control">
+                                                            <label for="addhard1-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-model" name="addhard1-model"
+                                                                placeholder="addhard1-model" input class="form-control">
+                                                            <label for="addhard1-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-serial" name="addhard1-serial"
+                                                                placeholder="addhard1-serial" input class="form-control">
+                                                            <label for="addhard1-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-qty" name="addhard1-qty"
+                                                                placeholder="addhard1-qty" input class="form-control" oninput="calculateAmount('addhard1')">
+                                                            <label for="addhard1-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-hsn"
+                                                                name="addhard1-hsn"
+                                                                placeholder="addhard1-hsn" input
+                                                                class="form-control">
+                                                            <label for="addhard1-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="addhard1-warranty-exp"
+                                                                name="addhard1-warranty-exp"
+                                                                placeholder="addhard1-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="addhard1-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-rate" name="addhard1-rate"
+                                                                placeholder="addhard1-rate" input class="form-control" oninput="calculateAmount('addhard1')">
+                                                            <label for="addhard1-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard1-amount" name="addhard1-amount"
+                                                                placeholder="addhard1-amount" input class="form-control">
+                                                            <label for="addhard1-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--================ addhard1 end =================================-->
+
+
+
+                                                <div class="row mb-1">
+                                                    <label for="addhard2" class="col-xl-1 col-form-label">Additional Hardware 2
+                                                        :</label>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-make" name="addhard2-make"
+                                                                placeholder="addhard2-make" input class="form-control">
+                                                            <label for="addhard2-make">Brand Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-model" name="addhard2-model"
+                                                                placeholder="addhard2-model" input class="form-control">
+                                                            <label for="addhard2-model">Model</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-serial" name="addhard2-serial"
+                                                                placeholder="addhard2-serial" input class="form-control">
+                                                            <label for="addhard2-serial">Serial Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-qty" name="addhard2-qty"
+                                                                placeholder="addhard2-qty" input class="form-control" oninput="calculateAmount('addhard2')">
+                                                            <label for="addhard2-qty">Qty</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-hsn"
+                                                                name="addhard2-hsn"
+                                                                placeholder="addhard2-hsn" input
+                                                                class="form-control">
+                                                            <label for="addhard2-hsn">HSN/SAC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <select id="addhard2-warranty-exp"
+                                                                name="addhard2-warranty-exp"
+                                                                placeholder="addhard2-warranty-exp" input
+                                                                class="form-control">
+                                                                <option value="6">6 Months</option>
+                                                                <option value="12">1 Year</option>
+                                                                <option value="24">2 Years</option>
+                                                                <option value="36">3 Years</option>
+                                                                <option value="60">5 Years</option></select>
+                                                            <label for="addhard2-warranty-exp">Warranty Expiry
+                                                                Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-rate" name="addhard2-rate"
+                                                                placeholder="addhard2-rate" input class="form-control" oninput="calculateAmount('addhard2')">
+                                                            <label for="addhard2-rate">Rate</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-1">
+                                                        <div class="form-floating mb-2 mb-md-0">
+
+                                                            <input type="text" id="addhard2-amount" name="addhard2-amount"
+                                                                placeholder="addhard2-amount" input class="form-control">
+                                                            <label for="addhard2-amount">Amount</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
