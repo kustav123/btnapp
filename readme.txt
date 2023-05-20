@@ -2,5 +2,5 @@
    --- insted of opening addmem.php open a modal 
 
 
-2. reffer /php/pcbill.php for inster invoice 
+2. reffer /php/pcbill.php for insert invoice 
 3. in.php html of bill use it to genarete bill on /php/pcbill.php 
