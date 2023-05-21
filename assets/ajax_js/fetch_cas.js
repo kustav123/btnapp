@@ -11,7 +11,9 @@ document.getElementById("customer-mob").addEventListener("blur", function() {
         var data = JSON.parse(this.responseText);
         if (data.name == "No Data") {
           // if the response indicates no data, clear the name field
-          window.location.href = "addmem.php?mob=" + mobile;
+          // window.location.href = "addmem.php?mob=" + mobile;
+          $('#mobileNumber').val(mobile);
+          document.getElementById("open-addmem-model").click();
         } else {
           // if data is available, update the name field in the form
           document.getElementById("customer-name").value = data.name;
@@ -20,10 +22,6 @@ document.getElementById("customer-mob").addEventListener("blur", function() {
           document.getElementById("customer-add").value = data.add;
           // document.getElementById("castid").value = data.id;
           document.getElementById("castid").value = data.id;
-
-
-
-
         }
       }
     };

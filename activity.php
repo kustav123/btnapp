@@ -17,7 +17,6 @@ require_once("navbar.php");
 
 <body>
     <main id="main" class="main">
-
         <div class="pagetitle">
             <h1>Profile</h1>
             <nav>
@@ -63,7 +62,8 @@ require_once("navbar.php");
                             <div class="tab-content pt-2">
 
                                 <div class="tab-pane fade show active desktop-pc" id="desktop-pc">
-                                    <form action="/btnapp/php/pcbill.php" method=post>
+                                    <!-- <form action="/btnapp/php/pcbill.php" method=post> -->
+                                    <form action="in.php" method=post>
                                         <div class="card col-xl-12 m-auto">
                                             <div class="card-body">
                                                 <h5 class="card-title">Desktop PC</h5>
@@ -528,6 +528,126 @@ require_once("navbar.php");
     <script src="assets/ajax_js/fetch_make.js"></script>
     <script src="assets/ajax_js/fetch_cas.js"></script>
     <script src="assets/js/calculateamount.js"></script>
+
+
 </body>
 
 </html>
+<button type="button" id="open-addmem-model" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered" style="display: none;"></button>
+
+<div class="modal fade" id="verticalycentered" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Client</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3" action="add-member-logic.php" id="addmem-form">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" maxlength="30"  required>
+                    <label for="fullName">Full Name</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" minlength="10" maxlength="10" value="" required onkeyup="checkmob()">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <div id="mobileNumberError" class="text-danger"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" maxlength="30" >
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <select class="form-select" id="type" name="type" aria-label="Type" required>
+                        <option value="Home">Home</option>
+                        <option value="Commercial">Commercial</option>
+                    </select>
+                    <label for="type">Type</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-floating">
+                    <textarea class="form-control" id="address" name="address" placeholder="Address" maxlength="100" required></textarea>
+                    <label for="address">Address</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-floating">
+                    <textarea class="form-control" id="remarks" name="remarks" placeholder="Remarks" maxlength="100"></textarea>
+                    <label for="remarks">Remarks</label>
+                </div>
+            </div>
+            <div class="text-end">
+                <button type="submit" id="submit-addmem-form" class="btn btn-primary">Submit</button>
+                <button type="reset" id="reset-addmem-form" class="btn btn-secondary">Reset</button>
+                <button type="button" id="close-addmem-model" class="btn btn-secondary" data-bs-dismiss="modal"  style="display: none;">Close</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+</div><!-- End Vertically centered Modal-->
+
+<script>
+  function checkmob() {
+    var mobileNumber = document.getElementById("mobileNumber").value;
+
+    var query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob = '" + mobileNumber + "'";
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        // Parse the query result and show an error message if the kevaID already exists
+        var result = JSON.parse(xhr.responseText);
+        var count = result.count;
+        if (count > 0) {
+          document.getElementById("mobileNumberError").innerHTML = "This Client  is already Added.";
+          $("#submit-addmem-form").prop('disabled', true)
+        } else {
+          document.getElementById("mobileNumberError").innerHTML = "";
+          $("#submit-addmem-form").prop('disabled', false)
+        }
+      }
+    };
+    xhr.open("GET", "ajax/query.php?q=" + encodeURIComponent(query));
+    xhr.send();
+  }
+
+    $(function() {
+        $("#addmem-form").submit(function(e) {
+            e.preventDefault();
+            var actionurl = e.currentTarget.action;
+            
+            $.ajax({
+                url: actionurl,
+                type: 'post',
+                dataType: 'application/json',
+                data: $("#addmem-form").serialize(),
+                success: function(data) {},
+                error: function(data){
+                    data = JSON.parse(data.responseText);
+                    if(!data.error){
+                        alert(data.msg);
+
+                        document.getElementById("customer-name").value = data.customer.name;
+                        document.getElementById("customer-mob").value = data.customer.mobile;
+                        document.getElementById("customer-type").value = data.customer.type;
+                        document.getElementById("customer-add").value = data.customer.add;
+                        document.getElementById("castid").value = data.customer.id;
+
+                        document.getElementById("close-addmem-model").click();
+                        document.getElementById("reset-addmem-form").click();
+                    }else{
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+    });
+</script>

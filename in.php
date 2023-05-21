@@ -165,29 +165,50 @@
     #container {
         background-color: #dcdcdc;
     }
+    .product-tr{
+        height: 15px;
+    }
     </style>
 
     <script type="text/javascript">
     $(document).ready(function() {
         $('#InkPrint').click(function() {
+            $.ajax({
+                url: 'php/pcbill.php',
+                type: 'post',
+                dataType: 'application/json',
+                data: <?=json_encode($_POST); ?>,
+                success: function(data) {console.log(data)},
+                error: function(data){console.log(data)}
+            });
             window.print();
         });
     });
     </script>
 </head>
 
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $customer_mob = $_POST["customer-mob"];
+        $customer_name = $_POST["customer-name"];
+        $customer_add = $_POST["customer-add"];
+        $btnbill = $_POST["bill-no"];
+        $refbill = $_POST["ref-bill-no"];
+        $ammount = $_POST["total-amount"];
+        $subtotal = $_POST["subtotal"];
+        $cgst = $_POST["cgst"];
+        $sgst = $_POST["sgst"] ;
+        $billdate = $_POST["bill-date"];
+        $castid = $_POST["castid"]; 
+        $date =  $_POST["bill-date"];
+?>
+
+
 <body>
-
-
-
-
     <div class="col-md-12">
         <div class="row">
-
             <div class="receipt-main col-md-8">
                 <div class="row align-items-center">
-                    <!-- <div class="receipt-header"> -->
-
                     <div class="col-4 text-left">
                         <div class="receipt-right">
                             <h5>Address</h5>
@@ -202,14 +223,12 @@
                         <div class="row align-items-end">
                             <div class="col-2">
                                 <div class="receipt-left">
-                                    <img class="img-responsive" alt="iamgurdeeposahan" src="photo/logo.jpg"
-                                        style="width: 80px;">
+                                    <img class="img-responsive" alt="" src="photo/logo.jpg" style="width: 80px;">
                                 </div>
                             </div>
                             <div class="col-10">
                                 <div class="receipt-right">
                                     <h5>B.T.N TECHNO SOLUTION</h5>
-
                                     <p>Total IT And CCTV Solution</p>
                                 </div>
                             </div>
@@ -218,30 +237,25 @@
                     <div class="col">
                         <div class="receipt-right">
                             <h5>TAX INVOICE</h5>
-                            <p>DATE :</p>
-                            <p>INVOICE NO #</p>
-
+                            <p>DATE : <?=(isset($billdate)) ? $billdate  :''; ?></p>
+                            <p>BILL NO # <?=(isset($btnbill)) ? $btnbill  :''; ?></p>
+                            <p>REFERANCE BILL NO # <?=(isset($refbill)) ? $refbill  :''; ?></p>
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
                 <hr>
 
                 <div class="row">
-                    <!-- <div class="receipt-header receipt-header-mid"> -->
                     <div class="col-md-4 text-left">
                         <div class="receipt-right">
                             <h5>CUSTOMER</h5>
-                            <p>Changghurail, Maju, J.B. Pur</P>
-                            <p>Howrah - 711410</P>
-                            <p><b>Mobile :</b> +91 9830255838</p>
-                            <p><b>Email :</b> info@btntechno.in</p>
-                            <p><b>GSTIN :</b> 19CCDPSO725H1ZJ</p>
+                            <p><?=(isset($customer_name)) ? $customer_name  :''; ?></P>
+                            <p><?=(isset($customer_add)) ? $customer_add  :''; ?></P>
+                            <p><b>Mobile :</b> <?=(isset($customer_mob)) ? $customer_mob  :''; ?></p>
+                            <p><b>Email :</b> <?=(isset($customer_email)) ? $customer_email  :''; ?></p>
+                            <p><b>GSTIN :</b> <?=(isset($customer_gst)) ? $customer_gst  :''; ?></p>
                         </div>
                     </div>
-                    
-
-                    <!-- </div> -->
                 </div>
                 <hr>
 
@@ -259,178 +273,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            <tr>
-                                <td>Payment for August 2016</td>
-                                <td>ABHDYU</td>
-                                <td>12</td>
-                                <td>2</td>
-                                <td>600</td>
-                                <td> 12,00/-</td>
-                            </tr>
-                            
-                          
-                            
-
+                            <?php
+                                $list = json_decode($_POST['list']);
+                                $emptyCount = 0;
+                                foreach($list as $row) {                                    
+                                    $pid = $row->id; 
+                                    $code = $row->code;
+                                    $pmake = $_POST["$code-make"];
+                                    if (!empty($pmake)){
+                                        echo "<tr class='product-tr'>
+                                            <td>{$pmake} - {$_POST["$code-model"]} - {$_POST["$code-serial"]}</td>
+                                            <td>{$_POST["$code-hsn"]}</td>
+                                            <td>{$_POST["$code-warranty-exp"]}</td>
+                                            <td>{$_POST["$code-qty"]}</td>
+                                            <td>{$_POST["$code-rate"]}</td>
+                                            <td> {$_POST["$code-amount"]}/-</td>
+                                        </tr>";
+                                    }else{
+                                        $emptyCount++;
+                                    }
+                                }
+                                for ($i=0; $i < $emptyCount; $i++) { 
+                                    echo "<tr class='product-tr'>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>";
+                                }
+                            ?>
                             <tr>
                                 <td colspan="2">
                                     <p><b>Our Bank Details:</b></p>
@@ -442,8 +315,7 @@
 
                                 <td colspan="3" class="text-right">
                                     <p>
-                                        <strong>Subtotal Amount: </strong>
-                                    
+                                        <strong>Subtotal Amount: </strong>                                   
                                     <p>
                                         <strong>CGST 9%: </strong>
                                     </p>
@@ -457,44 +329,35 @@
 
                                 <td>
                                     <p>
-                                        <strong> 65,500/-</strong>
+                                        <strong> <?=(isset($subtotal)) ? $subtotal : 0; ?>/-</strong>
                                     </p>
                                     <p>
-                                        <strong> 500/-</strong>
+                                        <strong>  <?=(isset($cgst)) ? $cgst : 0; ?>/-</strong>
                                     </p>
                                     <p>
-                                        <strong> 1300/-</strong>
+                                        <strong>  <?=(isset($sgst)) ? $sgst : 0; ?>/-</strong>
                                     </p>
                                     <p>
-                                        <strong>9500/-</strong>
+                                        <strong><?=(isset($ammount)) ? $ammount : 0; ?>/-</strong>
                                     </p>
                                 </td>
                             </tr>
 
-
                             <tr>
-
                                 <td colspan="5" class="text-right">
                                     <h2><strong>Total: </strong></h2>
 
-
                                 <td class="text-left text-danger">
-                                    <h2><strong> 31.566/-</strong></h2>
+                                    <h2><strong> <?=(isset($ammount)) ? $ammount : 0; ?>/-</strong></h2>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-
-
-
                 <div class="row">
-
                     <table>
                         <tr>
                             <td class="col">
-
                                 <div class="term">
                                     <table class="table table-bordered">
                                         <thead class="bg-primary text-white">
@@ -540,25 +403,27 @@
                                 </div>
                             </td>
                         </tr>
-
-
-
                     </table>
-
-
                 </div>
-
             </div>
         </div>
     </div>
     <!-- <input type="button" onclick="printDiv('print-content')" value="print a div!"/> -->
-    <a href="#" id="InkPrint">Print</a>
-
-
-
-
-
+    <button class="btn btn-primary" id="InkPrint">Print & Save</a>
+    <button class="btn btn-primary ml-5" id="btnCancel" style="margin-left:10px">Cancel</a>
 </body>
 
-
+<?php
+    }else{
+        echo "Unauthorised access";
+    }
+?>
 </html>
+
+<script>
+    $(function() {
+        $("#btnCancel").click(function() {            
+            window.location.href = "activity.php";
+        });
+    });
+</script>
