@@ -33,7 +33,7 @@ if (mysqli_num_rows($checkResult) > 0) {
     // $btnbill already exists, handle the situation as needed (e.g., display an error message)
     echo "Error: Bill number already exists";
 } else {
-    $sql="INSERT INTO btnapp.invoicemain( billno, refbill, cgst, sgst, subtotal, total) VALUES( '$btnbill', '$refbill', '$cgst', '$sgst', '$subtotal', '$ammount')";
+    $sql="INSERT INTO btnapp.invoicemain( billno, refbill, cgst, sgst, subtotal, total, castmob, date) VALUES( '$btnbill', '$refbill', '$cgst', '$sgst', '$subtotal', '$ammount', $customer_mob, $date)";
     $sql3 = "UPDATE invoice SET num = num + 1 WHERE type = 'T'";
     mysqli_query($link, $sql3);
 
