@@ -280,12 +280,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <!-- user manegment menu -->
    <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-    <i class="ri-user-line"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+    <i class="ri-user-line"></i><span>Client Management</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="addmem.php">
-          <i class="bi bi-circle"></i><span>Add New Members</span>
+          <i class="bi bi-circle"></i><span>Add New Client</span>
         </a>
       </li>
       
@@ -295,12 +295,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <!-- activity tracking menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#activity-nav" data-bs-toggle="collapse" href="#">
-    <i class="bi bi-file-earmark-spreadsheet-fill"></i><span>Activity Management</span><i class="bi bi-chevron-down ms-auto"></i>
+    <i class="bi bi-file-earmark-spreadsheet-fill"></i><span>Billing Management</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
     <ul id="activity-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="activity.php">
-          <i class="bi bi-circle"></i><span>Add Activity</span>
+          <i class="bi bi-circle"></i><span>New Bill</span>
         </a>
       </li>
       
