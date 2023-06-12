@@ -26,11 +26,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql="INSERT INTO btnapp.invoicemain( billno, refbill, cgst, sgst, subtotal, total) VALUES( '$btnbill', '$refbill', '$cgst', '$sgst', '$subtotal', '$ammount')";
 
     if(mysqli_query($link, $sql)){
+
         $list = json_decode($_POST['list'], true); // decode the JSON string into an array
         foreach($list as $row) {
-            $pid = $row->id; 
-            $code = $row->code;
-            $pmake = $_POST["$code-make"];
+               $pid = $row['id'];
+                $code = $row['code'];
+                $pmake = $_POST["$code-make"];
 
             if (!empty($pmake)){
                 $pmodel = $_POST["$code-model"];
@@ -42,14 +43,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // $subtotal = $_POST["$code-subtotal"];
                 // $procgst = $_POST["$code-cgst"];
                 // $prosgst = $_POST["$code-sgst"];
-                $prosrate = $_POST["$code-rate"];
+                $prorate = $_POST["$code-rate"];
 
-
-                $sql2 = "INSERT INTO btnapp.billpc(castid, , btnbill, `date`, product_id, promake, promod, prosn, proqty, proammount, prowarrenty, prohsn, subtota, cgst, sgst, total)
-                VALUES('$castid',  '$btnbill', '$date', '$pid', '$pmake', '$pmodel', '$prosn', '$proqty', ' DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL $prowarr MONTH), '%Y-%m-%d')',
-                 '$prohsn', '$subtotal', '$procgst', '', '', '');";
+                $sql2 = "INSERT INTO btnapp.billpc
+                (castmob, btnbill, date product_id, promake, promod, prosn, proqty, prorate, prowarrenty, prohsn, proammount)
+                VALUES('$customer_mob', '$btnbill' , '$date', '$pid', '$pmake', '$pmodel', '$prosn', '$proqty', '$prorate',  DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 36 MONTH), '%Y-%m-%d'), ' $prohsn', '$proamm');";
+                $sql3 = "UPDATE invoice SET num = num + 1 WHERE type = 'T'";
                 mysqli_query($link, $sql2);
-            }
+                mysqli_query($link, $sql3);
+
+
+                }
         }
     }
 }

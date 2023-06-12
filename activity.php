@@ -356,7 +356,6 @@ require_once("navbar.php");
                                     </form>
 
                                 </div>
-<!-- ignore code from here  -->
                                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                                     Profile Edit Form

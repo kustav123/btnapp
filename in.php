@@ -265,7 +265,7 @@
                             <tr>
                                 <th class="col-md-6">Description</th>
                                 <th>HSN/SAC</th>
-                                <th>Warranty</th>
+                                <!-- <th>Warranty</th> -->
                                 <th>QTY</th>
                                 <th>RATE</th>
                                 <th>AMOUNT</th>
@@ -282,9 +282,9 @@
                                     $pmake = $_POST["$code-make"];
                                     if (!empty($pmake)){
                                         echo "<tr class='product-tr'>
-                                            <td>{$pmake} - {$_POST["$code-model"]} - {$_POST["$code-serial"]}</td>
+                                            <td>{$pmake} - {$_POST["$code-model"]} , SN. - {$_POST["$code-serial"]}</td> 
                                             <td>{$_POST["$code-hsn"]}</td>
-                                            <td>{$_POST["$code-warranty-exp"]}</td>
+                                            <!--  <td>{$_POST["$code-warranty-exp"]}</td> -->
                                             <td>{$_POST["$code-qty"]}</td>
                                             <td>{$_POST["$code-rate"]}</td>
                                             <td> {$_POST["$code-amount"]}/-</td>
@@ -297,7 +297,7 @@
                                     echo "<tr class='product-tr'>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
+                                        <!-- <td></td> -->
                                         <td></td>
                                         <td></td>
                                         <td></td>
