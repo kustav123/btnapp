@@ -22,8 +22,8 @@ require_once("navbar.php");
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item">Users</li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-item">Bill</li>
+                    <li class="breadcrumb-item active">New bill</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -595,28 +595,28 @@ require_once("navbar.php");
 </div><!-- End Vertically centered Modal-->
 
 <script>
-  function checkmob() {
-    var mobileNumber = document.getElementById("mobileNumber").value;
+//   function checkmob() {
+//     var mobileNumber = document.getElementById("mobileNumber").value;
 
-    var query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob = '" + mobileNumber + "'";
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // Parse the query result and show an error message if the kevaID already exists
-        var result = JSON.parse(xhr.responseText);
-        var count = result.count;
-        if (count > 0) {
-          document.getElementById("mobileNumberError").innerHTML = "This Client  is already Added.";
-          $("#submit-addmem-form").prop('disabled', true)
-        } else {
-          document.getElementById("mobileNumberError").innerHTML = "";
-          $("#submit-addmem-form").prop('disabled', false)
-        }
-      }
-    };
-    xhr.open("GET", "ajax/query.php?q=" + encodeURIComponent(query));
-    xhr.send();
-  }
+//     var query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob = '" + mobileNumber + "'";
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function() {
+//       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//         // Parse the query result and show an error message if the kevaID already exists
+//         var result = JSON.parse(xhr.responseText);
+//         var count = result.count;
+//         if (count > 0) {
+//           document.getElementById("mobileNumberError").innerHTML = "This Client  is already Added.";
+//           $("#submit-addmem-form").prop('disabled', true)
+//         } else {
+//           document.getElementById("mobileNumberError").innerHTML = "";
+//           $("#submit-addmem-form").prop('disabled', false)
+//         }
+//       }
+//     };
+//     xhr.open("GET", "ajax/query.php?q=" + encodeURIComponent(query));
+//     xhr.send();
+//   }
 
     $(function() {
         $("#addmem-form").submit(function(e) {

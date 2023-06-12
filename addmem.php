@@ -193,29 +193,8 @@ require_once ("footer.php");
 
 
   
+<script src="assets/ajax_js/check_cas.js"></script>
 
-<script>
-  function checkmob() {
-    var mobileNumber = document.getElementById("mobileNumber").value;
-
-    var query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob = '" + mobileNumber + "'";
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // Parse the query result and show an error message if the kevaID already exists
-        var result = JSON.parse(xhr.responseText);
-        var count = result.count;
-        if (count > 0) {
-          document.getElementById("mobileNumberError").innerHTML = "This Client  is already Added.";
-        } else {
-          document.getElementById("mobileNumberError").innerHTML = "";
-        }
-      }
-    };
-    xhr.open("GET", "ajax/query.php?q=" + encodeURIComponent(query));
-    xhr.send();
-  }
-</script>
 
 
 </body>

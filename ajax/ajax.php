@@ -47,4 +47,30 @@
           echo json_encode($data);
 }
 }
+
+
+if(isset($_GET['chkmob'])){
+  $q = $_GET['chkmob'];
+  if(isset($q) || !empty($q)) {
+      $query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob  = '$q'";
+      
+      $result = mysqli_query($link, $query);
+      if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            $data =  array("count" => "1"); 
+           
+          }
+        } else {
+          $data = array("count" => "0");
+
+        }
+        
+        $link->close();
+        
+        // return the data as a JSON object
+        header('Content-Type: application/json');
+        echo json_encode($data);
+}
+}
 ?>
