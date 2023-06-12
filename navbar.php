@@ -285,10 +285,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="addmem.php">
-          <i class="bi bi-circle"></i><span>Add New Client</span>
+          <i class="fa fa-plus fa-beat" style="color: #0000ff;"></i><span> Add New Client</span>
         </a>
       </li>
-      
+      <li>
+        <a href="userlist.php">
+          <i class="fa fa-search fa-beat" style="color: #0000ff;"></i><span> Client Database</span>
+        </a>
+      </li>
     </ul>
   </li>
 
@@ -300,7 +304,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <ul id="activity-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="activity.php">
-          <i class="bi bi-circle"></i><span>New Bill</span>
+        <i class="fa fa-plus fa-beat" style="color: #0000ff;"></i><span>New Bill</span>
+          
         </a>
       </li>
       
