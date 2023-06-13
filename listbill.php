@@ -9,7 +9,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$sql = "SELECT * FROM clientmain";
+$mobile_no = trim($_GET["mob"]) ;
+$sql = "SELECT * FROM invoicemain WHERE castmob = '$mobile_no'";
 ?>
     <title>Client Database </title>
 
@@ -35,12 +36,13 @@ $sql = "SELECT * FROM clientmain";
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Client Database</h1>
+  <h1>Client Bill</h1>
   <nav>
     <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">User Manegment</li>
-          <li class="breadcrumb-item active">Client Database</li>
+    <li class="breadcrumb-item">User Manegment</li>
+    <li class="breadcrumb-item active"><a href="userlist.php">Client Database</a></li>
+          <li class="breadcrumb-item active">Client Bill</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
@@ -51,7 +53,7 @@ $sql = "SELECT * FROM clientmain";
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Database</h5>
+          <h5 class="card-title">Invoice</h5>
           <p> ..... </p>
           
           <!-- Table with stripped rows -->
@@ -59,13 +61,12 @@ $sql = "SELECT * FROM clientmain";
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Email</th>
-                <th scope="col">Type</th>
-                <th scope="col">Address</th>
-                <th scope="col">Remarks</th>
-                <th scope="col">Action</th>
+                <th scope="col">Date</th>
+                <th scope="col">Bill No</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">CGST</th>
+                <th scope="col">SGST</th>
+                <th scope="col">Total</th>
 
 
               </tr>
@@ -78,16 +79,16 @@ $sql = "SELECT * FROM clientmain";
                    while($row = mysqli_fetch_array($result)){
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['name'] . "</td>";
-                echo "<td>" . $row['mob'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['type'] . "</td>";
-                echo "<td>" . $row['address'] . "</td>";
-                echo "<td>" . $row['remarks'] . "</td>";
+                echo "<td>" . $row['date'] . "</td>";
+                echo "<td>" . $row['billno'] . "</td>";
+                echo "<td>" . $row['subtotal'] . "</td>";
+                echo "<td>" . $row['cgst'] . "</td>";
+                echo "<td>" . $row['sgst'] . "</td>";
+                echo "<td>" . $row['total'] . "</td>";
       
 
                 echo "<td>";
-                    echo '<a href="listbill.php?mob='. $row['mob'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fas fa-file-invoice fa-spin" style="color: #0a4cbd;"></span></a>';
+                    echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye fa-beat"></span></a>';
                     echo '&nbsp<a href="update_cas.php?uid='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil fa-beat"></span></a>';
                     echo '&nbsp<a href="ajax.php?DND=Yes&id='. $row['id'] .' " title="Start DND" data-toggle="tooltip"><span class="fa fa-ban fa-beat" style="color: #ea1506;"></span></a>';
 

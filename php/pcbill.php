@@ -33,20 +33,20 @@ if (mysqli_num_rows($checkResult) > 0) {
     // $btnbill already exists, handle the situation as needed (e.g., display an error message)
     echo "Error: Bill number already exists";
 } else {
-    $sql="INSERT INTO btnapp.invoicemain( billno, refbill, cgst, sgst, subtotal, total, castmob, date) VALUES( '$btnbill', '$refbill', '$cgst', '$sgst', '$subtotal', '$ammount', $customer_mob, $date)";
+    $sql = "INSERT INTO btnapp.invoicemain (billno, refbill, cgst, sgst, subtotal, total, castmob, date) VALUES ('$btnbill', '$refbill', '$cgst', '$sgst', '$subtotal', '$ammount', '$customer_mob', '$date')";
     $sql3 = "UPDATE invoice SET num = num + 1 WHERE type = 'T'";
     mysqli_query($link, $sql3);
 
     if(mysqli_query($link, $sql)){
         $list = json_decode($_POST['list'], true); // decode the JSON string into an array
-        print_r($list);
+        // print_r($list);
         foreach($list as $row) {
                $pid = $row['id'];
                 $code = $row['code'];
                 $pmake = $_POST["$code-make"];
             
             if (!empty($pmake)){
-                echo 'dddd';
+                // echo 'dddd';
 
                 $pmodel = $_POST["$code-model"];
                 $prosn = $_POST["$code-serial"];
