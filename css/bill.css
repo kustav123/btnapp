@@ -9,7 +9,14 @@ body {
     margin-top: 0;
     padding: 0;
 } */
-
+@media print {
+    #InkPrint {
+      display: none;
+    }
+    #btnCancel {
+        display: none;
+      }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -150,14 +157,14 @@ body {
     font-size: 20px;
     font-weight: 900;
 }
-/* #foot{
+#foot{
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
   height: 100px;
   margin-bottom: 90px;
-} */
+}
 #term{
     padding: 5px 20px;
     display: flex;
