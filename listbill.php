@@ -67,6 +67,8 @@ $sql = "SELECT * FROM invoicemain WHERE castmob = '$mobile_no'";
                 <th scope="col">CGST</th>
                 <th scope="col">SGST</th>
                 <th scope="col">Total</th>
+                <th scope="col">Action</th>
+
 
 
               </tr>
@@ -85,10 +87,11 @@ $sql = "SELECT * FROM invoicemain WHERE castmob = '$mobile_no'";
                 echo "<td>" . $row['cgst'] . "</td>";
                 echo "<td>" . $row['sgst'] . "</td>";
                 echo "<td>" . $row['total'] . "</td>";
+
       
 
                 echo "<td>";
-                    echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye fa-beat"></span></a>';
+                    echo '<a href="read.php?bill='. $row['billno'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-print fa-beat"></span></a>';
                     echo '&nbsp<a href="update_cas.php?uid='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil fa-beat"></span></a>';
                     echo '&nbsp<a href="ajax.php?DND=Yes&id='. $row['id'] .' " title="Start DND" data-toggle="tooltip"><span class="fa fa-ban fa-beat" style="color: #ea1506;"></span></a>';
 
@@ -113,19 +116,12 @@ $sql = "SELECT * FROM invoicemain WHERE castmob = '$mobile_no'";
 
 </main><!-- End #main -->
 
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-<div class="copyright">
-  &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+<div style="position:fixed;bottom:0;width:100%;">
+      <?php 
+require_once ("footer.php");
+?>
 </div>
-<div class="credits">
-  <!-- All the links in the footer should remain intact. -->
-  <!-- You can delete the links only if you purchased the pro version. -->
-  <!-- Licensing information: https://bootstrapmade.com/license/ -->
-  <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-</div>
-</footer><!-- End Footer -->
+
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
