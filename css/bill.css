@@ -1,0 +1,243 @@
+/* 
+@page {
+    size: auto;
+    margin: 0mm;
+}
+
+body {
+    background: #eee;
+    margin-top: 0;
+    padding: 0;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    background: #fff;
+    overflow-x: hidden;
+}
+#bill_body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+}
+#billHead{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logoName{
+    display: flex;
+}
+#logoName img{
+  height: 50px;
+  width: 80px;
+}
+#logoName h1{
+ margin-left: 15px;
+ font-size: 20px;
+ color: navy;
+ font-weight: 800;
+}
+#logoName h5{
+    margin-left: 15px;
+    font-size: 10px;
+    color: #222 ;
+}
+
+#invoice h5{
+  font-size: 10px;
+  font-weight: 700;
+  color: navy;
+}
+#invoice p{
+    font-size: 9px;
+    font-weight: 100;
+    color: #222;
+    line-height: 14px;
+}
+#headstrap{
+    width: 100%;
+    height: 15px;
+    background-color: lightblue;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+}
+#headstrap p{
+    background-color: #fff;
+    font-size: 15px;
+    color: navy;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-right: 10%;
+    padding: 0 6px;
+}
+#address{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#owner h5{
+  font-size: 18px;
+  font-weight: 800;
+  color: navy;
+}
+#owner p{
+    font-size: 15px;
+    color: #222;
+}
+#owner span{
+    color: navy;
+    font-weight: bold;
+}
+#customer h5{
+    font-size: 18px;
+    font-weight: 800;
+    color: navy;
+}
+#customer p{
+  font-size: 15px;
+  color: #222;
+}
+#customer span{
+  color: navy;
+  font-weight: bold;
+}
+#tablediv{
+    padding: 10px;
+}
+#tablediv table {
+    border-collapse: collapse;
+    width: 100%;
+    border-left: 1px solid #222;
+    border-bottom: 1px solid #222;
+  }
+  
+#tablediv th {
+    text-align: center;
+    padding: 8px; 
+} 
+#tablediv td {
+    text-align: left;
+    padding: 4px 8px; 
+    border-right: 1px solid #222;
+}
+  
+#tablediv tr:nth-child(even){background-color: #f2f2f2}
+  
+#tablediv th {
+    background-color: lightblue;
+    color: #222;
+}
+#tablediv p{
+    color: #222;
+    font-size: 15px;
+    font-weight: 100;
+}
+#tablediv p span{
+    color: maroon;
+    font-weight: 900;
+}
+#tablediv h2{
+    color: maroon;
+    font-size: 20px;
+    font-weight: 900;
+}
+/* #foot{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100px;
+  margin-bottom: 90px;
+} */
+#term{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#term table{
+    border: 1px solid #222;
+}
+#term th{
+    text-align: center;
+    padding: 4px;
+    font-size: 7px;
+    background: lightblue;
+}
+#term tbody td{
+ font-size: 9px;
+ border-bottom: 1px solid #222;
+}
+#term tfoot td{
+    padding: 0 0 20px;
+}
+#stmp{
+    border: 1px solid #3a3838;
+    padding: 5px 40px;
+    display: flex;
+    align-items: end;
+}
+#stmp p{
+    background: #474545;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 10px;
+}
+#thank{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 2px 20px;
+}
+#thanks{
+    margin-left: 40%;
+}
+#thank p{
+    font-size: 20px;
+    font-weight: 800;
+    color: #444343;
+}
+#qr{
+    display: flex;
+}
+#qr1 img{
+    height: 70px;
+    width: 70px;
+    padding-right: 5px;
+}
+#qr2 img{
+    height: 70px;
+    width: 70px;
+}
+#btndiv{
+    padding: 20px;
+    margin-left: 40%;
+}
+.btn{
+    background: lightblue;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 800;
+    border-radius: 15px;
+    box-shadow: inset #222;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 6px #a5a5a5;
+}
+.btn:hover {background-color: rgb(16, 169, 219)}
+
+.btn:active {
+  background-color: rgb(12, 176, 231);
+  box-shadow: 0 3px #a5a5a5;
+  transform: translateY(1px);
+}
