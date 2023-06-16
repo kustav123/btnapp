@@ -213,7 +213,7 @@
                     </table>
             </div>
             <div id="foot">
-            <div id="term">
+              <div id="term">
                 <div id="rule">
                     <table>
                         <thead>
@@ -248,8 +248,8 @@
                 <div id="stmp">
                      <p>Stamp</p>
                 </div>
-            </div>
-            <div id="thank">
+               </div>
+              <div id="thank">
                 <div id="thanks">
                     <p>Thanks for shopping.!</p>
                 </div>
@@ -261,11 +261,12 @@
                         <img src="./photo/Atanu_Sasmol.png" alt="">
                     </div>
                 </div>
-            </div>
+               </div>
             </div>
         </div>
     
     </div>
+    
     <div id="btndiv">
      <!-- <input type="button" onclick="printDiv('print-content')" value="print a div!"/> -->
     <button class="btn" id="InkPrint">Print & Save</a>
