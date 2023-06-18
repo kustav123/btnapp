@@ -310,6 +310,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           
         </a>
       </li>
+      <li>
+        <a href="invoicelist.php">
+        <i class="fa fa-search fa-beat" style="color: #0000ff;"></i><span>Bill Management</span>
+          
+        </a>
+      </li>
       
     </ul>
   </li>
