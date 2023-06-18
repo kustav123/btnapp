@@ -143,10 +143,10 @@
                                     if (!empty($pmake)){
                                         echo "<tr class='product-tr'>
                                             <td>{$pmake} - {$_POST["$code-model"]} , SN. - {$_POST["$code-serial"]}</td> 
-                                            <td>{$_POST["$code-hsn"]}</td>
-                                            <td>{$_POST["$code-qty"]}</td>
-                                            <td>{$_POST["$code-rate"]}</td>
-                                            <td> {$_POST["$code-amount"]}/-</td>
+                                            <td class='text-center'>{$_POST["$code-hsn"]}</td>
+                                            <td class='text-right'>{$_POST["$code-qty"]}</td>
+                                            <td class='text-right'>{$_POST["$code-rate"]}</td>
+                                            <td class='text-right'> {$_POST["$code-amount"]}/-</td>
                                         </tr>";
                                     }else{
                                         $emptyCount++;
@@ -171,7 +171,7 @@
                                     <p><span>Branch :</span> MAJU</p>
                                 </td>
 
-                                <td colspan="3" class="text-right">
+                                <td colspan="3">
                                     <p>
                                         <span>Subtotal Amount :</span>                                   
                                     <p>
@@ -186,23 +186,23 @@
                                 </td>
 
                                 <td>
-                                    <p>
+                                    <p class='text-right'>
                                      <?=(isset($subtotal)) ? $subtotal : 0; ?>/-
                                     </p>
-                                    <p>
+                                    <p class='text-right'>
                                     <?=(isset($cgst)) ? $cgst : 0; ?>/-
                                     </p>
-                                    <p>
+                                    <p class='text-right'>
                                     <?=(isset($sgst)) ? $sgst : 0; ?>/-
                                     </p>
-                                    <p>
+                                    <p class='text-right'>
                                     <?=(isset($ammount)) ? $ammount : 0; ?>/-
                                     </p>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td colspan="4" class="text-right">
+                                <td colspan="4">
                                     <h2>Total:</h2>
 
                                 <td class="text-left text-danger">
