@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $type = test_input($_POST["type"]);
         $address = test_input($_POST["address"]);
         $remarks = test_input($_POST["remarks"]);
+        $gst = test_input($_POST["gst"]);
 
         // Check that mobileNumber is a valid format (e.g. 10 digits)
         if (!preg_match("/^[0-9]{10}$/",$mobileNumber)) {
@@ -73,9 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if ( empty($fullNameError) && empty($mobileNumberError) ) {
   
     // Insert new record into usermain table
-    $sql = "INSERT INTO `clientmain`( `name`, `mob`, `email`, `type`, `address`, `remarks`) VALUES (?,?,?,?,?,?)";
+    $sql = "INSERT INTO `clientmain`( `name`, `mob`, `email`, `type`, `address`, `remarks`, `gstno`) VALUES (?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($link, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssss", $fullName, $mobileNumber,  $emmail ,$type , $address , $remarks);
+    mysqli_stmt_bind_param($stmt, "sssssss", $fullName, $mobileNumber,  $emmail ,$type , $address , $remarks , $gst);
     mysqli_stmt_execute($stmt);
     // Check if the record was successfully inserted
    
@@ -157,6 +158,13 @@ if ( empty($fullNameError) && empty($mobileNumberError) ) {
             <textarea class="form-control" id="address" name="address"
                 placeholder="Address" maxlength="100" required></textarea>
             <label for="address">Address</label>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-floating">
+            <textarea class="form-control" id="gst" name="gst" 
+                placeholder="GST" maxlength="20" required></textarea>
+            <label for="address">GST</label>
         </div>
     </div>
     <div class="col-md-12">

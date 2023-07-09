@@ -63,6 +63,7 @@ $sql = "SELECT * FROM clientmain";
                 <th scope="col">Mobile</th>
                 <th scope="col">Email</th>
                 <th scope="col">Type</th>
+                <th scope="col">GST</th>
                 <th scope="col">Address</th>
                 <th scope="col">Remarks</th>
                 <th scope="col">Action</th>
@@ -82,6 +83,7 @@ $sql = "SELECT * FROM clientmain";
                 echo "<td>" . $row['mob'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
                 echo "<td>" . $row['type'] . "</td>";
+                echo "<td>" . $row['gstno'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['remarks'] . "</td>";
       

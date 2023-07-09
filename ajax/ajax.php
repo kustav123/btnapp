@@ -52,7 +52,7 @@
 if(isset($_GET['chkmob'])){
   $q = $_GET['chkmob'];
   if(isset($q) || !empty($q)) {
-      $query = "SELECT COUNT(*) AS count FROM clientmain WHERE mob  = '$q'";
+      $query = "SELECT *  FROM clientmain WHERE mob  = '$q'";
       
       $result = mysqli_query($link, $query);
       if ($result->num_rows > 0) {

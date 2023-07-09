@@ -95,7 +95,7 @@
                     <h5>TAX INVOICE</h5>
                     <p>DATE : <?=(isset($billdate)) ? $billdate  :''; ?></p>
                     <p>BILL NO # <?=(isset($btnbill)) ? $btnbill  :''; ?></p>
-                    <p>REFERANCE BILL NO # <?=(isset($refbill)) ? $refbill  :''; ?></p>
+                    <!-- <p>REFERANCE BILL NO # <?=(isset($refbill)) ? $refbill  :''; ?></p> -->
                     </div>
                     </div>
             </div>
@@ -135,12 +135,13 @@
                         <tbody>
                         <?php
                                 $list = json_decode($_POST['list']);
-                                $emptyCount = 0;
+                                $hasProduct = 0;
                                 foreach($list as $row) {                                    
                                     $pid = $row->id; 
                                     $code = $row->code;
                                     $pmake = $_POST["$code-make"];
                                     if (!empty($pmake)){
+                                        $hasProduct++;
                                         echo "<tr class='product-tr'>
                                             <td>{$pmake} - {$_POST["$code-model"]} , SN. - {$_POST["$code-serial"]}</td> 
                                             <td class='text-center'>{$_POST["$code-hsn"]}</td>
@@ -148,11 +149,11 @@
                                             <td class='text-right'>{$_POST["$code-rate"]}</td>
                                             <td class='text-right'> {$_POST["$code-amount"]}/-</td>
                                         </tr>";
-                                    }else{
-                                        $emptyCount++;
                                     }
                                 }
-                                for ($i=0; $i < $emptyCount; $i++) { 
+                                $maxPermissableNoOfTableRowsInAPage = 37;
+                                
+                                for ($i=0; $i < $maxPermissableNoOfTableRowsInAPage - $hasProduct; $i++) { 
                                     echo "<tr>
                                         <td></td>
                                         <td></td>
@@ -161,6 +162,7 @@
                                         <td></td>
                                     </tr>";
                                 }
+                                
                             ?>
                             <tr>
                                 <td colspan="1">
@@ -206,7 +208,7 @@
                                     <h2>Total:</h2>
 
                                 <td class="text-left text-danger">
-                                    <h2><?=(isset($ammount)) ? $ammount : 0; ?>/-</h2>
+                                    <h2 class='text-right'><?=(isset($ammount)) ? $ammount : 0; ?>/-</h2>
                                 </td>
                             </tr>
                         </tbody>
