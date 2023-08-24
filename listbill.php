@@ -91,7 +91,7 @@ $sql = "SELECT * FROM invoicemain WHERE castmob = '$mobile_no'";
       
 
                 echo "<td>";
-                    echo '<a href="read.php?bill='. $row['billno'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-print fa-beat"></span></a>';
+                    echo '<a href="viewbill.php?bill='. $row['billno'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-print fa-beat"></span></a>';
                     echo '&nbsp<a href="update_cas.php?uid='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil fa-beat"></span></a>';
                     echo '&nbsp<a href="ajax.php?DND=Yes&id='. $row['id'] .' " title="Start DND" data-toggle="tooltip"><span class="fa fa-ban fa-beat" style="color: #ea1506;"></span></a>';
 
